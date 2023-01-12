@@ -89,7 +89,6 @@ const SignIn = () => {
       <React.Fragment>
         <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: 'auto', backgroundColor:'primary' }}>
-     
           <Box
             sx={{
               my: 8,
@@ -99,12 +98,8 @@ const SignIn = () => {
               alignItems: 'center',
             }}
           >
-            
-            <Typography component="h1" variant="h5"
-           
-            >
+            <Typography component="h1" variant="h5">
              {t("login:signin")} 
-            
             </Typography>
             {
                   !login.error? null:
