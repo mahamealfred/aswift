@@ -10,6 +10,7 @@ import jwt from "jsonwebtoken";
 export let refreshTokens = [];
 
 const generateAccessToken = (user) => {
+
   return jwt.sign({ id: user.id, names: user.names,role:user.role }, "mySecretKey", {
     expiresIn: "10m",
   });
@@ -25,6 +26,7 @@ export const loginAction = (user,history) => async (dispatch) => {
     dispatch(loginRequest());
     const {username}=user
     const {password}=user 
+ 
     const basicAuth = Buffer.from(`${username}:${password}`).toString('base64');
    const Url='https://agentapi.mobicash.rw/api/agent/user/rest/v.4.14.01/auth';
    const res = await axios.post(Url,{}, {

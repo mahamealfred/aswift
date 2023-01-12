@@ -136,4 +136,4 @@ const user = {
    
   );
 };
-export default HomePage ;
+export default HomePage 

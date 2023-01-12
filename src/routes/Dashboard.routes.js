@@ -3,6 +3,7 @@ import { useRouteMatch, Route,Switch } from "react-router-dom";
 import Dashboard from "../views/Dashboard";
 import PrivateRoute from "./PrivateRoutes"
 import HomePage from "../pages/home/HomePage";
+import ServicePage from "../pages/home/Services";
 import Account from "../pages/myaccount/Account";
 import  MyProfile from "../pages/myaccount/AccountProfile";
 import  FaqPage from "../pages/faqpage";
@@ -34,7 +35,7 @@ function App() {
             component={({ match }) => (
               <>
                 {/* <PrivateRoute exact path={path} component={Home} /> */}
-                <PrivateRoute exact path={path} component={HomePage} />
+                <PrivateRoute exact path={path} component={ServicePage} />
                 <PrivateRoute exact path={`${path}/my-account`} component={Account} />
                 <PrivateRoute exact path={`${path}/my-profile`} component={MyProfile} />
                 <PrivateRoute exact path={`${path}/faq`} component={FaqPage} />

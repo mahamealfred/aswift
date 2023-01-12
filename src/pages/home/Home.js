@@ -33,7 +33,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import ListItems from './ListItems';
-
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 //Modal
 import Backdrop from '@mui/material/Backdrop';
@@ -285,7 +284,7 @@ setOpenModal(false)
 
 <Modal
         open={openPageReflesh}
-       // onClose={handleClosePageReflesh}
+       onClose={handleClosePageReflesh}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
